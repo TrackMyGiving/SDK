@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Flood Team - SDK</title>
+
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="A local design system testing tool" />
+    <meta name="theme-color" content="#16161d" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Flood Team Components" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <script type="module" src="/build/floodteam.esm.js"></script>
+    <script nomodule src="/build/floodteam.js"></script>
+
+    <link href="/build/floodteam.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icon/apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <style>
+      body {
+        display: block;
+        overflow: auto;
+        position: initial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <floodteam-init
+      host="http://localhost:4000"
+      token="test"
+      functions-host="http://localhost:5001/ftms-ca85b/us-central1"
+    ></floodteam-init>
+    <ion-card>
+      <fireenjin-form endpoint="addJob" submit-button-color="success">
+        <floodteam-input
+          placeholder="Customer Name"
+          label="Customer Name"
+        ></floodteam-input>
+        <ion-button type="submit" color="success">Submit</ion-button>
+      </fireenjin-form>
+    </ion-card>
+  </body>
+</html>
